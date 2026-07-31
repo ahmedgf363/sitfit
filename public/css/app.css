@@ -135,3 +135,28 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+@media (max-width: 48rem){
+
+    .chat-btn{
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .chat-box{
+        right: 1rem;
+        left: 1rem;
+
+        width: auto;
+        height: 70vh;
+        max-height: 30rem;
+
+        bottom: 5rem;
+        border-radius: 1rem;
+    }
+
+    .chat-body{
+        overflow-y: auto;
+    }
+
+}

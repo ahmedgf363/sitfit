@@ -249,15 +249,19 @@
 .btn-view-details {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background-color: #001F3F;
-    color: #FFFFFF;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
+    justify-content: center;
+    gap: .5rem;
+
+    padding: .9rem 1.4rem;
+    min-width: 10rem;
+    white-space: nowrap;
+
+    background: #001F3F;
+    color: #fff;
+    border-radius: .75rem;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    font-weight: 600;
+    transition: .3s;
 }
 
 .btn-view-details:hover {
@@ -377,3 +381,4 @@
     border-radius: 50%;
     object-fit: cover;
 }
+

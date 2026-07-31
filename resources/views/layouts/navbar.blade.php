@@ -52,10 +52,7 @@
                         <i class="fa-solid fa-user"></i>
                         <span>Login</span>
                     </a>
-                    <a href="{{ route('register') }}" class="sf-btn sf-btn-primary">
-                        <i class="fa-solid fa-user-plus"></i>
-                        <span>Create Account</span>
-                    </a>
+                   
                 @endguest
 
                 @auth
@@ -73,12 +70,12 @@
         <span> Profile</span>
     </a>
 
-    <a href="#">
+    <a href="{{ route('profile.address') }}">
         <i class="fa-solid fa-location-dot"></i>
         <span>My Address</span>
     </a>
 
-    <a href="#">
+    <a href="{{ route('profile.orders') }}">
         <i class="fa-solid fa-box"></i>
         <span>My Orders</span>
     </a>
@@ -112,10 +109,7 @@
                     <i class="fa-solid fa-user"></i>
                     <span>Login</span>
                 </a>
-                <a href="{{ route('register') }}" class="sf-btn sf-btn-primary">
-                    <i class="fa-solid fa-user-plus"></i>
-                    <span>Create Account</span>
-                </a>
+
             @endguest
 
             @auth

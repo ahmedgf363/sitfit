@@ -30,7 +30,13 @@
         <aside class="sidebar" id="sidebar">
            <div class="sidebar-logo">
     <img src="{{ asset('images/sitfit_logo_admin.png') }}" alt="SitFit Logo">
-</div>
+
+             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+           </button>
+           </div>
+
+         
 
             <nav class="sidebar-nav">
                 <a href="{{ route('home') }}" class="nav-item ">
@@ -87,9 +93,9 @@
        <!-- Sticky Topbar -->
             <header class="topbar">
                 <div class="topbar-left">
-                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                    <!-- <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
                         <i class="fa-solid fa-bars"></i>
-                    </button>
+                    </button> -->
 
                     <h1 class="page-title">
                         @yield('title', 'Admin Dashboard')

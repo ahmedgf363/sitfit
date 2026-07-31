@@ -314,3 +314,25 @@
     color: #ffffff;
     border-color: #dc2626;
 }
+
+/* Mobile Fix */
+@media (max-width: 48rem) {
+
+    .form-actions{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .save-btn,
+    .logout-btn{
+        width: 100%;
+        max-width: 16rem;
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
