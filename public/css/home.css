@@ -692,7 +692,7 @@
 /* ==========================================
    🎨 How It Works Styles & Interactive Effects
    ========================================== */
-
+   /* how-it-works-section */
 .how-it-works-section {
     padding: 5rem 5%;
     background-color: #f7f6f2;
@@ -742,7 +742,7 @@
 /* Timeline Grid */
 .steps-timeline {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* تجعل كل الكروت بنفس الطول والارتفاع تماماً */
     justify-content: space-between;
     gap: 1.5rem;
 }
@@ -750,6 +750,9 @@
 /* Step Card */
 .step-card {
     flex: 1;
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    align-items: center;
     background: #F8FAFC;
     border: 2px solid #9DC183;
     border-radius: 1.8rem;
@@ -757,15 +760,15 @@
     text-align: center;
     position: relative;
     cursor: pointer;
-    transition: all 0.35s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
     box-shadow: 0 10px 30px rgba(157, 193, 131, 0.08);
 }
 
+/* ارتفاع الكارد لأعلى عند الوقوف عليه */
 .step-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(107, 147, 80, 0.15);
+    transform: translateY(-16px);
+    box-shadow: 0 22px 45px rgba(107, 147, 80, 0.2);
 }
-
 
 .step-card.active-card {
     background-color: #9DC183 !important;
@@ -803,22 +806,29 @@
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
-/* Image Wrapper */
+/* Image Wrapper — ضبط حجم إطار الصورة */
 .step-image-wrapper {
     width: 100%;
-    height: 140px;
+    height: 160px; /* ارتفاع ثابت لجميع إطارات الصور */
     border-radius: 1rem;
     overflow: hidden;
     margin-bottom: 1.2rem;
     background: #ffffff;
     border: 1px solid rgba(157, 193, 131, 0.3);
+    flex-shrink: 0; /* يمنع انكماش الحاوية */
 }
 
+/* Step Image — قص الصورة لتنسجم تماماً وتملأ الحاوية بدون تمطيط */
 .step-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* ملء المساحة وتوحيد المقاس دون تشويه الصورة */
     border-radius: 1rem;
+    transition: transform 0.4s ease;
+}
+
+.step-card:hover .step-img {
+    transform: scale(1.05);
 }
 
 /* Icon Box */
@@ -833,6 +843,7 @@
     justify-content: center;
     font-size: 1.1rem;
     margin: 0 auto 1rem auto;
+    flex-shrink: 0;
 }
 
 /* Typography Inside Card */
@@ -850,6 +861,8 @@
     color: rgba(0, 31, 63, 0.75);
     line-height: 1.5;
     margin: 0;
+    /* لجعل الفقرات تأخذ المساحة المتبقية بالتساوي وتوحيد مكان المحتوى */
+    flex-grow: 1;
 }
 
 /* Arrow Connectors */
@@ -865,12 +878,18 @@
     font-size: 0.9rem;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(107, 147, 80, 0.3);
+    align-self: center; /* يتوسط الأسهم عمودياً بالنسبة للكروت */
 }
 
 /* Responsive */
 @media (max-width: 992px) {
     .steps-timeline {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .step-card {
+        width: 100%;
     }
 
     .step-connector {
@@ -886,7 +905,6 @@
     --sp-white: #ffffff;
     --sp-border-radius: 15px;
 }
-
 /* ==========================================
    7. Premium Product Preview Gallery
    ========================================== */
