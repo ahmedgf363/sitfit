@@ -586,6 +586,8 @@ input:focus {
 
 #vodafone_receipt {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
     padding: 0.75rem;
 
@@ -596,6 +598,13 @@ input:focus {
 
     font-size: 0.875rem;
     cursor: pointer;
+    overflow: hidden;
+}
+
+
+#vodafone_receipt::file-selector-button {
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 
