@@ -537,3 +537,84 @@ input:focus {
     flex-direction: column;
   }
 }
+
+/* Vodafone Cash Section */
+
+#vodafone-fields {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    border: 0.0625rem solid var(--color-border);
+}
+
+
+#vodafone-fields .form-group {
+    margin-bottom: 1rem;
+}
+
+
+.vodafone-number {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    background-color: var(--color-white);
+    border: 0.0625rem solid var(--color-border);
+
+    padding: 0.875rem 1rem;
+    border-radius: var(--radius-md);
+
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 700;
+
+    margin-top: 0.5rem;
+}
+
+
+#vodafone-fields small {
+    display: block;
+    margin-top: 0.5rem;
+
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+}
+
+
+/* Upload Receipt Button */
+
+#vodafone_receipt {
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border: 0.0625rem dashed var(--color-border);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-white);
+
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+
+#vodafone_receipt::file-selector-button {
+
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    border: none;
+    border-radius: var(--radius-md);
+
+    padding: 0.5rem 1rem;
+
+    margin-right: 0.75rem;
+
+    cursor: pointer;
+}
+
+
+#vodafone_receipt::file-selector-button:hover {
+    background-color: var(--color-primary-hover);
+}

@@ -52,10 +52,11 @@
             {{-- Form Section (Left Column on Desktop) --}}
             <section class="checkout-main">
                 <form 
-                    action="{{ route('checkout.store') }}" 
-                    method="POST" 
-                    class="checkout-form" 
-                    id="checkout-form">
+action="{{ route('checkout.store') }}" 
+method="POST"
+enctype="multipart/form-data"
+class="checkout-form"
+id="checkout-form">
                     @csrf
                     
                     {{-- Shipping Information --}}
@@ -209,15 +210,44 @@
             </div>
         </label>
 
-         {{-- Vodafone --}}
-        <label class="option-card">
-            <input type="radio" name="payment_method" value="vodafone">
-            <div class="option-content">
-                <span class="option-title">Vodafone Cash</span>
-                <span class="option-desc">Pay instantly via e-wallet</span>
-            </div>
-        </label>
+       
+        {{-- Vodafone --}}
+<label class="option-card">
+    <input type="radio" name="payment_method" value="vodafone">
+    <div class="option-content">
+        <span class="option-title">Vodafone Cash</span>
+        <span class="option-desc">Pay instantly via e-wallet</span>
+    </div>
+</label>
 
+
+{{-- Vodafone Cash Fields --}}
+<div id="vodafone-fields" style="display:none; margin-top:1.5rem;">
+
+    <div class="form-group">
+        <label>Transfer Number</label>
+
+        <div class="vodafone-number">
+            📱 0102223533
+        </div>
+
+        <small>
+            Send the total amount to this number and upload the receipt.
+        </small>
+    </div>
+
+
+    <div class="form-group">
+        <label for="vodafone_receipt">Upload Receipt</label>
+
+        <input 
+            type="file"
+            id="vodafone_receipt"
+            name="vodafone_receipt"
+            accept="image/*">
+    </div>
+
+</div>
         {{-- Credit Card --}}
         <label class="option-card">
             <input type="radio" name="payment_method" value="card">
@@ -397,41 +427,56 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     const methods = document.querySelectorAll('input[name="payment_method"]');
-    const cardFields = document.getElementById('card-fields');
+const cardFields = document.getElementById('card-fields');
+const vodafoneFields = document.getElementById('vodafone-fields');
+const vodafoneReceipt = document.getElementById('vodafone_receipt');
 
     const cardNumber = document.getElementById('card_number');
     const cardHolder = document.getElementById('card_holder');
     const expiryDate = document.getElementById('expiry_date');
     const cvv = document.getElementById('cvv');
 
-    function toggleCardFields() {
+   function toggleCardFields() {
 
-        const payment = document.querySelector('input[name="payment_method"]:checked').value;
+    const payment = document.querySelector('input[name="payment_method"]:checked').value;
 
-        if (payment === 'card') {
 
-            cardFields.style.display = 'block';
+    // Hide all extra fields
+    cardFields.style.display = 'none';
+    vodafoneFields.style.display = 'none';
 
-            cardNumber.required = true;
-            cardHolder.required = true;
-            expiryDate.required = true;
-            cvv.required = true;
 
-        } else {
+    // Remove required
+    cardNumber.required = false;
+    cardHolder.required = false;
+    expiryDate.required = false;
+    cvv.required = false;
+    vodafoneReceipt.required = false;
 
-            cardFields.style.display = 'none';
 
-            cardNumber.required = false;
-            cardHolder.required = false;
-            expiryDate.required = false;
-            cvv.required = false;
 
-            cardNumber.value = '';
-            cardHolder.value = '';
-            expiryDate.value = '';
-            cvv.value = '';
-        }
+    if(payment === 'card') {
+
+        cardFields.style.display = 'block';
+
+        cardNumber.required = true;
+        cardHolder.required = true;
+        expiryDate.required = true;
+        cvv.required = true;
+
     }
+
+
+
+    if(payment === 'vodafone') {
+
+        vodafoneFields.style.display = 'block';
+
+        vodafoneReceipt.required = true;
+
+    }
+
+}
 
     methods.forEach(method => {
         method.addEventListener('change', toggleCardFields);
