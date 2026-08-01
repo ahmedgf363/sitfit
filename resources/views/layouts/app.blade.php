@@ -56,7 +56,7 @@
     </div>
 
     {{-- أضفنا ID للـ Form والـ Input --}}
-    <form id="chat-form">
+    <form id="chat-form" data-action="{{ url('/chat/send') }}">
         @csrf
         <div class="chat-footer">
             <input type="text" id="chat-input" placeholder="Type your message..." required autocomplete="off">

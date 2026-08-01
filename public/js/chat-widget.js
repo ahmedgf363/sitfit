@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 3. إرسال الطلب لـ Laravel Controller
-            const response = await fetch("{{ route('chat.send') }}", {
+            const response = await fetch('{{ route("/chat/send")}}', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 // عرض رد الـ AI (تأكد من اسم الـ key المرتجع من الـ API مثلاً data.message)
-                const botReply = data.message || data.response || 'No response received.';
+                const botReply = data.answer || 'No response received.';
                 appendMessage(botReply, 'bot-message');
             } else {
                 appendMessage('Sorry, something went wrong. Please try again.', 'bot-message error');
