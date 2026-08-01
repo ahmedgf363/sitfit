@@ -37,7 +37,7 @@
             @foreach($products as $product)
                 <article class="product-card">
                     <div class="card-image-wrapper">
-                        <img src="{{ asset($product->image_1) }}" alt="{{ $product->name }}" class="product-image">
+                        <img src="{{ asset($product->image_5) }}" alt="{{ $product->name }}" class="product-image">
                         @if ($product->is_active)
                             <span class="status-badge status-active">Active</span>
                         @else

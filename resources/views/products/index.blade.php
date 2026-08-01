@@ -30,7 +30,7 @@
                     
 
                     <div class="card-media">
-                        <img class="img-main" src="{{ $product->image_1 }}" alt="{{ $product->name }}">
+                        <img class="img-main" src="{{ $product->image_5 }}" alt="{{ $product->name }}">
                     </div>
 
                     <div class="card-details">

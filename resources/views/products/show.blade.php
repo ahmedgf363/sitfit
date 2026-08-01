@@ -16,12 +16,7 @@
             
             <div class="product-gallery">
                 <div class="main-image-box">
-                    <img id="main-product-img" src="{{ asset($product->image_1) }}" alt="SitFit Smart Chair">
-                </div>
-                <div class="thumbnails-grid">
-                    <img class="thumbnail active" src="{{ asset($product->image_1) }}" onclick="changeImage(this.src)">
-                    <img class="thumbnail" src="{{ asset($product->image_2) }}" onclick="changeImage(this.src)">
-                    <img class="thumbnail" src="{{ asset($product->image_3) }}" onclick="changeImage(this.src)">
+                    <img id="main-product-img" src="{{ asset($product->image_5) }}" alt="SitFit Smart Chair">
                 </div>
             </div>
 

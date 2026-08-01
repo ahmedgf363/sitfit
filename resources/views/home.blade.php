@@ -131,7 +131,7 @@
                 <h3>SitFit Device</h3>
                 <div class="transform-img-box product-img-box">
                     <!>
-                    <img src="{{ asset('images/classic-chair-front.png') }}" alt="SitFit Product">
+                    <img src="{{ asset('images/products/sitfit_5.jpeg') }}" alt="SitFit Product">
                 </div>
                 <div class="product-features-mini">
                     <span><i class="fa-solid "></i> Ergonomic</span>
@@ -320,26 +320,34 @@
             <!-- Thumbnails — من الشمال -->
             <div class="thumbnails-wrapper sf-anim-left" data-delay="300">
                 <div class="thumb-card active" 
-                    data-src="{{ asset('images/products/sitfit-pro_1.jpeg') }}" 
+                    data-src="{{ asset('images/products/sitfit_1.jpeg') }}" 
                     data-is360="false" 
                     onclick="handleThumbClick(this)">
-                    <img src="{{ asset('images/products/sitfit-pro_1.jpeg') }}" alt="Main View">
+                    <img src="{{ asset('images/products/sitfit_1.jpeg') }}" alt="Main View">
                     <span class="thumb-label">Front</span>
                 </div>
                 
                 <div class="thumb-card" 
-                    data-src="{{ asset('images/products/sitfit-pro_2.jpeg') }}" 
+                    data-src="{{ asset('images/products/sitfit_2.jpeg') }}" 
                     data-is360="false" 
                     onclick="handleThumbClick(this)">
-                    <img src="{{ asset('images/products/sitfit-pro_2.jpeg') }}" alt="Side Profile">
+                    <img src="{{ asset('images/products/sitfit_2.jpeg') }}" alt="Side Profile">
                     <span class="thumb-label">Side</span>
                 </div>
 
                 <div class="thumb-card" 
-                    data-src="{{ asset('images/products/sitfit-pro_3.jpeg') }}" 
+                    data-src="{{ asset('images/products/sitfit_3.jpeg') }}" 
                     data-is360="false" 
                     onclick="handleThumbClick(this)">
-                    <img src="{{ asset('images/products/sitfit-pro_3.jpeg') }}" alt="Lumbar Support">
+                    <img src="{{ asset('images/products/sitfit_3.jpeg') }}" alt="Lumbar Support">
+                    <span class="thumb-label">Back</span>
+                </div>
+
+                <div class="thumb-card" 
+                    data-src="{{ asset('images/products/sitfit_4.jpeg') }}" 
+                    data-is360="false" 
+                    onclick="handleThumbClick(this)">
+                    <img src="{{ asset('images/products/sitfit_4.jpeg') }}" alt="Lumbar Support">
                     <span class="thumb-label">Back</span>
                 </div>
 
@@ -351,7 +359,7 @@
                     <i class="fa-solid fa-arrows-spin"></i> 
                 </div>
 
-                <img id="currentMainImg" src="{{ asset('images/products/sitfit-pro_1.jpeg') }}" alt="SitFit Ergonomic Chair Cushion" class="hero-product-img">
+                <img id="currentMainImg" src="{{ asset('images/products/sitfit_1.jpeg') }}" alt="SitFit Ergonomic Chair Cushion" class="hero-product-img">
                 
                 <div class="zoom-overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
