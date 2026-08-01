@@ -22,7 +22,7 @@
 
             <div class="auth-image">
 
-                <img src="{{ asset('images/seat_image.jpg') }}" alt="Mood Seat">
+                <img src="{{ asset('images/products/sitfit.jpeg') }}" alt="Mood Seat">
 
             </div>
 

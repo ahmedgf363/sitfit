@@ -40,7 +40,7 @@
         <div class="hero-image-wrapper">
             <div class="podium-glow"></div>
             <div class="hero-image">
-                <img src="{{ asset('images/seat_image.jpg') }}" alt="Smart Sitting Device" class="chair-img">
+                <img src="{{ asset('images/products/sitfit.jpeg') }}" alt="Smart Sitting Device" class="chair-img">
             </div>
         </div>
     </div>
@@ -250,13 +250,13 @@
             <div class="step-card sf-anim-right" data-delay="0">
                 <div class="step-number">01</div>
                 <div class="step-image-wrapper">
-                    <img src="{{ asset('images/sitfittt.png') }}" alt="Attach Device" class="step-img">
+                    <img src="{{ asset('images/products/sitfit_1.jpeg') }}" alt="Attach Device" class="step-img">
                 </div>
                 <div class="step-icon-box">
                     <i class="fa-solid fa-link"></i>
                 </div>
-                <h3>Attach Device</h3>
-                <p>Securely clip SitFit onto any office, gaming, or dining chair in seconds with universal flexible straps.</p>
+                <h3>Hardware & Sensors</h3>
+                <p> Built with advanced pressure sensors (FSR) and a posture-tracking module embedded within the frame to precisely monitor your spine alignment in real time.</p>
             </div>
 
             <!-- Arrow 1 — من تحت -->
@@ -268,13 +268,13 @@
             <div class="step-card sf-anim-right" data-delay="150">
                 <div class="step-number">02</div>
                 <div class="step-image-wrapper">
-                    <img src="{{ asset('images/sitfitkj.png') }}" alt="Adjust Support" class="step-img">
+                    <img src="{{ asset('images/products/sitfit_2.jpeg') }}" alt="Adjust Support" class="step-img">
                 </div>
                 <div class="step-icon-box">
                     <i class="fa-solid fa-sliders"></i>
                 </div>
-                <h3>Adjust Support</h3>
-                <p>Customize the lumbar tension and firmness to match your spine's natural curvature perfectly.</p>
+                <h3>Chair Attachment</h3>
+                <p>Easily position and bind SitFit to your office chair using flexible, heavy-duty straps to ensure complete stability while sitting.</p>
             </div>
 
             <!-- Arrow 2 — من تحت -->
@@ -286,13 +286,29 @@
             <div class="step-card sf-anim-right" data-delay="250">
                 <div class="step-number">03</div>
                 <div class="step-image-wrapper">
-                    <img src="{{ asset('images/sitfitt4.png') }}" alt="Enjoy Better Posture" class="step-img">
+                    <img src="{{ asset('images/products/sitfit_3.jpeg') }}" alt="Enjoy Better Posture" class="step-img">
                 </div>
                 <div class="step-icon-box">
                     <i class="fa-solid fa-face-smile"></i>
                 </div>
-                <h3>Enjoy Better Posture</h3>
-                <p>Sit back comfortably while smart haptic nudges maintain healthy posture throughout your working day.</p>
+                <h3>Multi-Layer Comfort</h3>
+                <p> Designed with high-density memory foam, an interactive sensor grid, and a durable inner shell to deliver ultimate comfort and structural support.</p>
+            </div>
+            <!-- Arrow 3 -->
+             <div class="step-connector sf-anim-right" data-delay="100">
+                <i class="fa-solid fa-chevron-right"></i>
+             </div>
+            <!-- Step 4 — من اليمين -->
+            <div class="step-card sf-anim-right" data-delay="250">
+                <div class="step-number">04</div>
+                <div class="step-image-wrapper">
+                    <img src="{{ asset('images/products/sitfit_4.jpeg') }}" alt="Enjoy Better Posture" class="step-img">
+                </div>
+                <div class="step-icon-box">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+                <h3>Ergonomic Posture Support</h3>
+                <p>Experience full upper and lower lumbar relief with targeted support zones and smart haptic vibrations that continuously guide you to sit healthy.</p>
             </div>
 
         </div>
