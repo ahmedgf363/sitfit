@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 3. إرسال الطلب لـ Laravel Controller
-            const response = await fetch("{{ route('chat.send') }}", {
+            const response = await fetch(window.chatSendUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

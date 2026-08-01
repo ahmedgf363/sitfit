@@ -117,11 +117,63 @@ html {
 
 .chat-body {
     flex: 1;
+    padding: 1rem;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    gap: 0.75rem;
+
+    scrollbar-width: none;      
+    -ms-overflow-style: none;   
+}
+
+.chat-body::-webkit-scrollbar {
+    display: none;              
+}
+
+.message {
+    display: flex;
+    width: 100%;
+}
+
+.message p {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    max-width: 75%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.bot-message p {
+    background: #F1F5F9;
+    color: #001F3F;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message p {
+    background: #9DC183;
+    color: #001F3F;
+}
+
+.chat-body p {
+    max-width: 80%;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .chat-body p {

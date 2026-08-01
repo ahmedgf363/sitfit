@@ -203,7 +203,7 @@
     </form>
 </div>
 
-<script src="{{ asset('js/chat-widget.js') }}"></script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -281,6 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+</script>
+
+<script>
+    window.chatSendUrl = "{{ route('chat.send') }}";
 </script>
 
 <script src="{{ asset('js/chat-widget.js') }}"></script>
