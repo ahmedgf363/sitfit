@@ -59,8 +59,17 @@
 
                 <ul class="sf-footer-links">
                     <li><a href="{{ route('home') }}#faq-section">FAQ</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li>
+                      <a href="#" data-open-privacy>
+                         Privacy Policy
+                      </a>
+                     </li>
+
+                     <li>
+                       <a href="#" data-open-terms>
+                             Terms of Service
+                      </a>
+                     </li>
                 </ul>
             </div>
 

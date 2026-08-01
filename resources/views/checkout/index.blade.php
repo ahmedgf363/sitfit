@@ -380,7 +380,7 @@
                     <div class="checkout-action">
                         <label class="terms-checkbox">
                             <input type="checkbox" name="terms" required form="checkout-form">
-                            <span>I agree to the <a href="#">Terms & Conditions</a>.</span>
+                            <span>I agree to the  <a href="#" data-open-terms>Terms & Conditions</a>.</span>
                         </label>
                         
                         <button type="submit" form="checkout-form" class="btn-primary place-order-btn">Place Order</button>

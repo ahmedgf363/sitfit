@@ -160,3 +160,140 @@ html, body {
     }
 
 }
+
+
+/* Custom SitFit Modals - Scoped to avoid layout interference */
+:root {
+    --sitfit-navy: #001F3F;
+    --sitfit-light-bg: #F1F5F9;
+    --sitfit-sage: #9DC183;
+    --sitfit-sage-dark: #81a868;
+}
+
+/* Modal Backdrop Overlay */
+.sitfit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 31, 63, 0.65); /* Dark Navy Overlay */
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Modal active state */
+.sitfit-modal-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Content Box */
+.sitfit-modal-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: scale(0.92);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-top: 5px solid var(--sitfit-sage);
+}
+
+.sitfit-modal-overlay.is-active .sitfit-modal-container {
+    transform: scale(1);
+}
+
+/* Modal Header */
+.sitfit-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--sitfit-navy);
+    color: #ffffff;
+}
+
+.sitfit-modal-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.sitfit-modal-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.sitfit-modal-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Modal Body */
+.sitfit-modal-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    background-color: var(--sitfit-light-bg);
+}
+
+
+.sitfit-modal-body h4 {
+    color: var(--sitfit-navy);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.sitfit-modal-body p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Modal Footer */
+.sitfit-modal-footer {
+    padding: 1rem 1.5rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sitfit-btn-close {
+    background-color: var(--sitfit-sage);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sitfit-btn-close:hover {
+    background-color: var(--sitfit-sage-dark);
+}
