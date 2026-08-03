@@ -52,11 +52,11 @@
             {{-- Form Section (Left Column on Desktop) --}}
             <section class="checkout-main">
                 <form 
-action="{{ route('checkout.store') }}" 
-method="POST"
-enctype="multipart/form-data"
-class="checkout-form"
-id="checkout-form">
+                    action="{{ route('checkout.store') }}" 
+                    method="POST"
+                    enctype="multipart/form-data"
+                    class="checkout-form"
+                    id="checkout-form">
                     @csrf
                     
                     {{-- Shipping Information --}}
@@ -173,7 +173,7 @@ id="checkout-form">
                             </div>
                         </div>
                     </fieldset>
-
+                </form>
                     {{-- Delivery Method --}}
                     <fieldset class="form-section">
                         <legend class="section-title">Delivery Method</legend>
@@ -228,7 +228,9 @@ id="checkout-form">
         <label>Transfer Number</label>
 
         <div class="vodafone-number">
-            📱 0102223533
+            <input
+                type="text"
+                placeholder="📱 0102223533">
         </div>
 
         <small>
@@ -326,7 +328,6 @@ id="checkout-form">
                             <span class="badge-text">Fast Delivery</span>
                         </div>
                     </div>
-                </form>
             </section>
 
             {{-- Sidebar Section (Right Column on Desktop) --}}
